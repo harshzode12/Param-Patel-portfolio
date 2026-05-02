@@ -1,0 +1,36 @@
+.navbar {
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  gap: 30px;
+
+  padding: 16px 28px;
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+
+  font-size: 20px;
+  color: #222;
+
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #222;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: black;
+}
+
+.nav-name {
+  font-size: 28px;
+  text-shadow: 0 0 0.5px black;
+}

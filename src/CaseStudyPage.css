@@ -1,0 +1,475 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Inter:wght@300;400;500;600&display=swap');
+
+/* Body */
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: url("/assets/day.png") no-repeat center center/cover;
+}
+
+/* Container */
+.case-container {
+  max-width: 1150px;
+  margin: 60px auto;
+  background: #f7f7f7;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* Top Bar */
+.top-bar {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #000;
+  font-size: 16px;
+}
+
+.company {
+  background: #000;
+  color: #fff;
+  padding: 12px 16px;
+  font-family: Inria Serif;
+}
+
+.role {
+  margin-left: 30px;
+  color: #1C1C1C;
+  font-family: Inria Serif;
+}
+
+/* ✅ FIX (better than margin-left:600px) */
+.date {
+  margin-left: 700px;
+  color: #1C1C1C;
+  font-family: Inria Serif;
+}
+
+/* Ticker */
+
+.ticker-track {
+  display: flex;
+  align-items: center; /* vertical center */
+  animation: tickerScroll 25s linear infinite;
+}
+
+/* text */
+.ticker-text {
+  margin: 0 -10px;
+}
+
+/* star */
+.ticker-dot {
+  margin: -10px -10px ; /* equal spacing on both sides */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: -5px;
+}
+
+.ticker {
+  padding: 10px 0;
+  background: #B8C4F2;
+  font-family: "Inria Serif";
+  overflow: hidden;
+  white-space: nowrap;
+
+  display: flex; /* important */
+}
+
+/* animate the whole track */
+.ticker-track {
+  display: flex; /* instead of inline-block */
+  white-space: nowrap;
+
+  animation: tickerScroll 25s linear infinite;
+}
+
+/* text styling (same as yours) */
+.ticker span {
+  display: inline-block;
+  margin-right: 30px;
+  font-size: 14px;
+  font-family: "Inria Serif";
+  color: #000000;
+}
+
+/* animation */
+@keyframes tickerScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Title */
+.main-title {
+  font-family: "Italiana", serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.main-title span {
+  display: block;
+  white-space: nowrap;
+}
+
+/* Description */
+.description {
+  margin-top: 30px;
+  font-family: "Inria Serif", serif;
+  max-width: 1100px;
+  font-size: 18px;
+  margin-left: 20px;
+  line-height: 1.8;
+  color: #333;
+}
+
+.highlight {
+  font-weight: 600;
+  color: #000;
+}
+
+/* Info Row */
+.info-row {
+  font-family: "Inria Serif";
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 40px;
+  margin-top: 50px;
+  padding: 0 20px;
+}
+
+.role-block {
+  justify-self: start;
+  text-align: left;
+  max-width: 700px;
+}
+
+.role-block h3 {
+  font-family: "Inria serif";
+  font-size: 24px;
+  margin-bottom: 12px;
+  padding-left: 10px;
+}
+
+.role-block p {
+  max-width: 600px;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #000;
+}
+
+/* Info text */
+/* DISCIPLINES heading */
+.info-block h3 {
+  font-family: "Inria Serif";
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+/* MY ROLE heading (different style) */
+.role-block h3 {
+  font-family: "Inria Serif";
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: #000000;
+  position: relative;
+  margin-left: -10px
+}
+
+.info-block p {
+  font-family: "Inria serif";
+  font-size: 18px;
+  line-height: 1.8;
+  color: #000000;
+  max-width: 600px;
+}
+
+/* ================= CROSS GRID ================= */
+
+/* MAIN GRID CONTAINER */
+.grid {
+  border: 2px solid #000;
+}
+
+/* EACH ROW */
+.grid-row {
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+}
+
+/* SECOND ROW (REVERSED) */
+.grid-row.reverse {
+  grid-template-columns: 1.25fr 0.75fr;
+}
+
+/* CARD BORDERS */
+.grid-row .card {
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
+/* Remove right border for last column */
+.grid-row .card:last-child {
+  border-right: none;
+}
+
+/* Remove bottom border for last row */
+.grid-row:last-child .card {
+  border-bottom: none;
+}
+
+/* Card Sizes */
+.card.small {
+  padding: 30px;
+}
+
+.card.big {
+  padding: 50px 40px;
+}
+
+/* Image Box */
+.image-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+/* Size Difference */
+.card.small .image-box {
+  height: 350px;
+}
+
+.card.big .image-box {
+  height: 480px;
+  margin: -20px;
+}
+
+/* Image Scaling */
+.card.small img {
+  height: 280px;
+}
+
+.card.big img {
+  height: 380px;
+}
+
+/* Colors */
+.peach {
+  background: #EFCAB7;
+}
+
+.blue {
+  background: #DAEFFF;
+}
+
+.beige {
+  background: #FDEEC7;
+}
+
+.green {
+  background: #D0FFD4;
+}
+
+/* Text */
+.card h3 {
+  font-family: "Inria Serif", serif;
+  font-size: 20px;
+  color: #000;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.card.small p {
+  font-family: "Inria Serif", serif;
+  max-width: 500px;
+  font-size: 18px;
+  color: #444;
+}
+
+.card.big p {
+  font-family: "Inria Serif", serif;
+  max-width: 700px;
+  font-size: 18px;
+  color: #444;
+}
+
+.section-0 .card.small img {
+  height: 280px;
+}
+
+.section-0 .card.big img {
+  height: 380px;
+}
+
+.section-0 .card.small .image-box {
+  height: 350px;
+}
+
+.section-0 .card.big .image-box {
+  height: 480px;
+}
+
+.section-1 .card.small img {
+  height: 240px; /* smaller */
+  width: 260px;
+}
+
+.section-1 .card.big img {
+  height: 360px; /* smaller */
+}
+
+.section-1 .card.small .image-box {
+  height: 300px;
+}
+
+.section-1 .card.big .image-box {
+  height: 420px;
+}
+
+/* 🔻 SECTION LAYOUT */
+.bottom-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px; /* 👈 reduced from 100px */
+}
+
+/* 🔻 CARD (INDIVIDUAL BOX) */
+.bottom-card {
+  border: 2px solid #000; /* 👈 each card has its own border */
+  padding: 40px 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 500px;
+
+  background: #fff;
+}
+
+.bottom-card {
+  width: 350px;   /* 👈 change this */
+  padding: 25px;
+  gap: 20px;
+}
+
+.bottom-wrapper {
+  max-width: 1150px;   /* 👈 SAME as .case-container */
+  margin: 60px auto;   /* 👈 center align */
+}
+
+/* 🔻 TITLE */
+.bottom-card h3 {
+  font-family: "Inria Serif";
+  font-size: 22px;
+  color: #6b6b6b;
+  margin: 0;
+}
+
+/* 🔻 IMAGE SECTION */
+.bottom-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+
+  padding: 30px 0;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+/* 🔻 IMAGE */
+.bottom-image img {
+  max-width: 80%;
+  height: auto;
+}
+
+/* 🔻 TEXT */
+.bottom-card p {
+  font-family: "Inria Serif";
+  font-size: 18px;
+  color: #6b6b6b;
+  margin: 0;
+}
+.card-top {
+  margin-bottom: 20px;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #1C1C1C;
+  font-family: "inter";
+  margin-bottom: 10px;
+}
+
+.card-top h2 {
+  font-family: "Italiana";
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #333;
+  margin-bottom: -20px;
+}
+.card-bottom {
+  margin-top: -10px;
+}
+
+.card-bottom h4 {
+  font-family: "Inria Serif";
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.card-bottom p {
+  font-family: "Inria Serif";
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* 🔻 BACKGROUND COLORS (ONLY IMAGE AREA) */
+.bottom-card.yellow .bottom-image {
+  background: #E7DFA3;
+}
+
+.bottom-card.pink .bottom-image {
+  background: #D9B3BC;
+}
+
+.bottom-card.purple .bottom-image {
+  background: #BFB2D9;
+}
+
+
+/* Responsive */
+@media (max-width: 900px) {
+  .case-container {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .grid-row {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    border-right: none;
+    border-bottom: 1px solid #000;
+  }
+
+  .main-title {
+    font-size: 36px;
+  }
+}
