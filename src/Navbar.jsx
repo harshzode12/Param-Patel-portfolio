@@ -27,7 +27,7 @@ export default function Navbar() {
 
       {/* UPDATED RESUME */}
       <a
-        href="https://drive.google.com/file/d/1kO-CqfLzgbDFZFArSsywDVUaHmON5nrD/view?usp=drive_link"
+        href="https://drive.google.com/file/d/1M2eOe9E15TceRXFuUokUFlyukKhnwmVm/view?usp=drive_link"
         target="_blank"
         rel="noopener noreferrer"
       >
